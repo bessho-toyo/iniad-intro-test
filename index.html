@@ -4,18 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>別所正博｜プロフィール</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
       min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
       color: #1f2937;
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
         "Noto Sans JP", sans-serif;
@@ -26,113 +19,88 @@
     }
 
     .profile-card {
-      width: min(100%, 680px);
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.7);
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.9);
       box-shadow: 0 16px 40px rgba(31, 41, 55, 0.14);
       backdrop-filter: blur(8px);
     }
 
     .profile-header {
-      padding: 48px 40px 36px;
-      color: #ffffff;
-      text-align: center;
+      color: #fff;
       background: linear-gradient(135deg, #2563eb, #0f766e);
     }
 
-    .profile-header p {
-      margin: 0 0 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
+    .profile-label {
       letter-spacing: 0.12em;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 6vw, 3rem);
+    .profile-name {
       letter-spacing: 0.08em;
     }
 
-    .content {
-      padding: 32px 40px 40px;
-    }
-
     .intro {
-      margin: 0 0 28px;
       color: #4b5563;
-      text-align: center;
       line-height: 1.8;
     }
 
-    .profile-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .profile-list .list-group-item {
+      background: transparent;
     }
 
-    .profile-list li {
-      display: grid;
-      grid-template-columns: 7em 1fr;
-      gap: 16px;
-      align-items: center;
-      padding: 18px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .profile-list li:last-child {
-      border-bottom: none;
-    }
-
-    .label {
+    .profile-list .label {
       color: #0f766e;
       font-weight: 700;
     }
 
-    .value {
-      color: #1f2937;
-      font-size: 1.05rem;
-    }
-
-    @media (max-width: 480px) {
-      .profile-header,
-      .content {
-        padding-right: 24px;
-        padding-left: 24px;
+    @media (max-width: 575.98px) {
+      .profile-card {
+        border-radius: 16px;
       }
 
-      .profile-list li {
-        grid-template-columns: 1fr;
-        gap: 6px;
+      .profile-header {
+        padding: 2rem 1.25rem !important;
       }
     }
   </style>
 </head>
 
-<body>
-  <main class="profile-card">
-    <header class="profile-header">
-      <p>PROFILE</p>
-      <h1>別所 正博</h1>
-    </header>
+<body class="d-flex align-items-center py-4">
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <article class="profile-card">
+          <header class="profile-header text-center px-4 py-5">
+            <p class="profile-label mb-2 fw-bold">PROFILE</p>
+            <h1 class="profile-name display-5 fw-bold mb-0">別所 正博</h1>
+          </header>
 
-    <section class="content">
-      <p class="intro">
-        東洋大学情報連携学部に所属しています。
-      </p>
+          <section class="p-4 p-md-5">
+            <p class="intro text-center mb-4">
+              東洋大学情報連携学部に所属しています。
+            </p>
 
-      <ul class="profile-list">
-        <li>
-          <span class="label">氏名</span>
-          <span class="value">別所正博</span>
-        </li>
-        <li>
-          <span class="label">所属</span>
-          <span class="value">東洋大学情報連携学部</span>
-        </li>
-      </ul>
-    </section>
+            <ul class="profile-list list-group list-group-flush">
+              <li class="list-group-item px-0 py-3">
+                <div class="row align-items-center g-2">
+                  <div class="col-12 col-sm-3"><span class="label">氏名</span></div>
+                  <div class="col-12 col-sm-9"><span>別所正博</span></div>
+                </div>
+              </li>
+              <li class="list-group-item px-0 py-3">
+                <div class="row align-items-center g-2">
+                  <div class="col-12 col-sm-3"><span class="label">所属</span></div>
+                  <div class="col-12 col-sm-9"><span>東洋大学情報連携学部</span></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </div>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
